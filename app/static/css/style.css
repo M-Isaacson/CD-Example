@@ -10,3 +10,9 @@ h1 {
 .p-center {
     text-align: center;
 }
+
+.user {
+    text-align: center;
+    font-size: large;
+    color: crimson;
+}
