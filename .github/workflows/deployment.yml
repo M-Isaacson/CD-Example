@@ -47,7 +47,7 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.DO_KEY }}
           port: ${{ secrets.PORT }}
-          script: sh scripts/update.sh
+          script: sh /home/cd-example/scripts/update.sh
 
         
 
