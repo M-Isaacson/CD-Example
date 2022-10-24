@@ -32,7 +32,7 @@ jobs:
           username: ${{ secrets.USERNAME }}
           port: ${{ secrets.PORT }}
           key: ${{ secrets.DO_KEY }}
-          source: "app/*,run.py,requirements.txt"
+          source: "app/*,run.py,requirements.txt,scripts/update.sh"
           target: "/home/cd-example"
   remote_setup:
     runs-on: ubuntu-20.04
