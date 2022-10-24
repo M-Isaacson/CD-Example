@@ -38,8 +38,8 @@ jobs:
     runs-on: ubuntu-20.04
     needs: deployment
     env:
-      HOST = ${{ secrets.HOST }}
-      USER = ${{ secrets.USERNAME }}
+      HOST: ${{ secrets.HOST }}
+      USER: ${{ secrets.USERNAME }}
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
