@@ -37,14 +37,15 @@ jobs:
   remote_setup:
     runs-on: ubuntu-20.04
     needs: deployment
+    env:
+      HOST = ${{ secrets.HOST }}
+      USER = ${{ secrets.USERNAME }}
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
       - name: Update Remote Python Modules
         run: sh ./scripts/update.sh
         shell: bash
-        env:
-          HOST = ${{ secrets.HOST }}
-          USER = ${{ secrets.USERNAME }}
+
         
 
