@@ -1,0 +1,12 @@
+h1 {
+    border: 2px solid #214f67;
+    border-radius: 10px;
+    background-color: bisque;
+    color: brown;
+    padding: 10px;
+    text-align: center;
+}
+
+.p-center {
+    text-align: center;
+}

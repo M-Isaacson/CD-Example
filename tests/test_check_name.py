@@ -1,4 +1,4 @@
-import check_name
+from app.functions import check_name
 
 
 def test_is_valid_name():
