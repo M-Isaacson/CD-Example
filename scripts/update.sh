@@ -1,12 +1,4 @@
-
-
-# SCP
-
-
-
-# scp to copy
-# Create release notes
-
-# If releases.txt exists, dan append else create
-
-# Then ssh into server to install requirements.txt
+ssh ${{ secrets.USERNAME }}@${{ secrets.HOST }}
+cd /home/cd-example
+pip install --upgrade pip
+pip install -r requirements.txt

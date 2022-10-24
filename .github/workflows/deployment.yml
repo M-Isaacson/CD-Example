@@ -20,9 +20,9 @@ jobs:
       - name: Run tests
         run: pytest
   deployment:
-      runs-on: ubuntu-20.04
-      needs: [testing]
-      steps:
+    runs-on: ubuntu-20.04
+    needs: testing
+    steps:
       - name: Checkout Code
         uses: actions/checkout@v3
       - name: Deploy App to DigitalOcean
@@ -32,5 +32,14 @@ jobs:
           username: ${{ secrets.USERNAME }}
           port: ${{ secrets.PORT }}
           key: ${{ secrets.DO_KEY }}
-          source: "app/*,run.py,requirements.txt,scripts/requirements.sh"
+          source: "app/*,run.py,requirements.txt"
           target: "/home/cd-example"
+  remote_setup:
+    runs-on: ubuntu-20.04
+    needs: deployment
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+      - name: Update Remote Python Modules
+        run: sh ./scripts/update.sh
+
